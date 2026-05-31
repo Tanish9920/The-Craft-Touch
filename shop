@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Craft Touch | Handmade Art Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f8f5f2;
+            color: #333;
+        }
+        header {
+            background: #b07a4a;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .page-title {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .page-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+        .page-title p {
+            font-size: 16px;
+            color: #555;
+        }
+        .product-list {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .item h3 {
+            margin: 12px 0 5px;
+        }
+        .item p {
+            font-size: 14px;
+            color: #666;
+        }
+        .item span {
+            display: block;
+            margin: 8px 0;
+            font-weight: bold;
+            color: #b07a4a;
+        }
+        .item button {
+            padding: 10px 15px;
+            background: #b07a4a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .item button:hover {
+            background: #94603a;
+        }
+        footer {
+            background: #b07a4a;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Craft Touch</h1>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#">Shop</a>
+        <a href="cart.html">Cart 🛒</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h2>Handmade Art Collection</h2>
+    <p>Explore our wide range of handcrafted decorative items</p>
+</section>
+
+<section class="product-list">
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f" alt="Wall Art">
+        <h3>Traditional Wall Art</h3>
+        <p>Authentic handmade wall decoration.</p>
+        <span>₹1,499</span>
+        <button onclick="addToCart('Traditional Wall Art',1499)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" alt="Table Decor">
+        <h3>Table Showpiece</h3>
+        <p>Elegant handmade table décor.</p>
+        <span>₹899</span>
+        <button onclick="addToCart('Table Showpiece',899)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4" alt="Lamp">
+        <h3>Decorative Lamp</h3>
+        <p>Warm light with artistic design.</p>
+        <span>₹1,299</span>
+        <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Pottery">
+        <h3>Handmade Pottery</h3>
+        <p>Beautiful clay pottery art.</p>
+        <span>₹699</span>
+       <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Wood Craft">
+        <h3>Wooden Craft</h3>
+        <p>Eco-friendly handmade wood décor.</p>
+        <span>₹1,099</span>
+        <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1616627451411-42c50a50c1e1" alt="Candle Holder">
+        <h3>Candle Holder</h3>
+        <p>Handcrafted decorative candle holder.</p>
+        <span>₹499</span>
+        <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Flower Pot">
+        <h3>Handmade Flower Pot</h3>
+        <p>Beautiful handcrafted ceramic flower pot.</p>
+        <span>₹599</span>
+        <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b" alt="Abstract Painting">
+        <h3>Abstract Painting</h3>
+        <p>Modern handmade abstract wall painting.</p>
+        <span>₹1,999</span>
+        <button onclick="addToCart('Decorative Lamp',1299)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Nature Painting">
+        <h3>Nature Painting</h3>
+        <p>Hand-painted nature artwork for home décor.</p>
+        <span>₹1,799</span>
+        <button onclick="addToCart('Hand-painted nature',1799)">Add to Cart</button>
+    </div>
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Traditional Painting">
+        <h3>Traditional Painting</h3>
+        <p>Indian traditional handmade painting.</p>
+        <span>₹2,299</span>
+        <button onclick="addToCart(' traditional handmade painting',2299)">Add to Cart</button>
+    </div>
+    <form> <br>
+        <button type="submit">Submit</button>
+        </form>
+</section>
+<script>
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Item added to cart!");
+}
+</script>
+
+<a href="cart.html">🛒 Go to Cart</a>
+
+<footer>
+    <p>© 2026 The Craft Touch | Handmade Art & Décor</p>
+</footer>
+
+</body>
+</html>
