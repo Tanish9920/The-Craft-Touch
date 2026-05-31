@@ -1,0 +1,260 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Craft Touch | Handmade Home Décor</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8f5f2;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#b07a4a,#e6c9a8);
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    height:80vh;
+    background:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.search-box{
+    display:flex;
+}
+
+.search-box input{
+    padding:12px;
+    width:300px;
+    border:none;
+    border-radius:5px 0 0 5px;
+}
+
+.search-box button{
+    padding:12px 20px;
+    border:none;
+    background:#b07a4a;
+    color:white;
+    cursor:pointer;
+    border-radius:0 5px 5px 0;
+}
+
+.products{
+    padding:60px 8%;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:35px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+.product img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-content{
+    padding:20px;
+}
+
+.product h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#b07a4a;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.product button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#b07a4a;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.product button:hover{
+    background:#94603a;
+}
+
+.about{
+    background:#efe6dc;
+    padding:60px 10%;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+.contact{
+    padding:60px 10%;
+    text-align:center;
+}
+
+.contact form{
+    max-width:500px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact button{
+    background:#b07a4a;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#b07a4a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.cart{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">The Craft Touch</div>
+
+    <nav>
+        <a href="shop.html">Shop</a>
+        <a href="#">About</a>
+        <a href="cart.html" class="cart">🛒 Cart (<span id="cartCount">0</span>)</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Handmade Home Décor</h1>
+    <p>
+        Discover beautiful handcrafted decorative products that bring
+        warmth, creativity and elegance to your home.
+    </p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
+</section>
+
+
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+        The Craft Touch is dedicated to promoting handmade décor products
+        crafted by talented artisans. Every piece is unique and designed
+        to add beauty and warmth to your home.
+    </p>
+</section>
+<footer>
+    <p>© 2026 The Craft Touch | Handmade With Love ❤️</p>
+</footer>
+
+<script>
+
+let cart = [];
+
+function addToCart(product){
+
+    cart.push(product);
+
+    document.getElementById("cartCount").innerText = cart.length;
+
+    alert(product + " added to cart successfully!");
+}
+
+</script>
+
+</body>
+</html>
